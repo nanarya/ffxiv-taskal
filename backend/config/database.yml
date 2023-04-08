@@ -7,10 +7,10 @@ default: &default
 
 development:
   <<: *default
-  database: ffxiv_tasklist_development
+  database: ffxiv_taskal_development
   password: password
 
 test:
   <<: *default
-  database: ffxiv_tasklist_test
+  database: ffxiv_taskal_test
   password: password
