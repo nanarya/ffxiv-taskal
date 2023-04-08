@@ -2,10 +2,15 @@ version: 5.0
 
 compose:
   files:
-    - backend/docker-compose.yml
+    - docker-compose.yml
 
 interaction:
-  bash:
+  bashf:
+    description: Open the Bash shell in app's container
+    service: frontend
+    command: bash
+
+  bashb:
     description: Open the Bash shell in app's container
     service: backend
     command: /bin/bash
@@ -40,7 +45,12 @@ interaction:
     service: backend
     command: bin/migrate
 
+  expo:
+    description: start expo
+    service: frontend
+    command: bash -c 'npx expo start'
+
 provision:
   - dip compose down --volumes
   - dip compose up -d db
-  - dip bash -c ./bin/setup
+  - dip bashb -c ./bin/setup
