@@ -48,7 +48,7 @@ interaction:
   expo:
     description: start expo
     service: frontend
-    command: bash -c 'npx expo start'
+    command: npx expo start
 
 provision:
   - dip compose down --volumes
