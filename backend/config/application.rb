@@ -8,7 +8,6 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-# This is omage for "The Dusk Vigil" & "Sohm Al".
 module FfxivTaskal
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.

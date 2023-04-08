@@ -8,7 +8,6 @@ if Rails.env.development?
   task :set_annotation_options do
     # You can override any of these by setting an environment variable of the
     # same name.
-    # rubocop:disable Metrics/BlockLength
     Annotate.set_defaults(
       'active_admin' => 'false',
       'additional_file_patterns' => [],
@@ -57,7 +56,6 @@ if Rails.env.development?
       'with_comment' => 'true'
     )
   end
-  # rubocop:enable Metrics/BlockLength
 
   Annotate.load_tasks
 end
