@@ -1,4 +1,4 @@
-class PlayersController < ApplicationController
+class PlayersController < BaseController
   before_action :set_player, only: %i[ show update destroy ]
 
   # GET /players

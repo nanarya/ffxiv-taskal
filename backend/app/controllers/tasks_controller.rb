@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class TasksController < ApplicationController
+class TasksController < BaseController
   before_action :set_task, only: %i[show update destroy]
 
   # GET /tasks

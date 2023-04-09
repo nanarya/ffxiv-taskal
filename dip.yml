@@ -6,12 +6,12 @@ compose:
 
 interaction:
   bashf:
-    description: Open the Bash shell in app's container
+    description: Open the Bash shell in frontend container
     service: frontend
     command: bash
 
   bashb:
-    description: Open the Bash shell in app's container
+    description: Open the Bash shell in backend container
     service: backend
     command: /bin/bash
 

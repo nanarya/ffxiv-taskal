@@ -1,4 +1,4 @@
-class HomeController < ApplicationController
+class HomeController < BaseController
   def index
     render json: {'home': 'welcome'}
   end
