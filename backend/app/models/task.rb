@@ -14,8 +14,15 @@
 #  title        :string           not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  player_id    :bigint           not null
+#
+# Indexes
+#
+#  index_tasks_on_player_id  (player_id)
 #
 class Task < ApplicationRecord
+  belongs_to :player
+
   enum :priority, {
     lowest: 0,
     low: 1,
